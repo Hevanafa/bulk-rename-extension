@@ -79,8 +79,11 @@ Public Class Form1
             $"Renamed { files.Count } files." & vbCrLf &
             IIf(skipped > 0, $"Skipped { skipped } files." + vbCrLf, "") &
             "Clear list?", "Success", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+
             files.Clear()
             lsbFiles.Items.Clear()
+
+            CheckEmptyList()
         End If
     End Sub
 
